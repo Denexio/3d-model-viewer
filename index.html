@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>3D Model Viewer</title>
+<meta charset="UTF-8">
+  <title>Fullscreen 3D Model</title>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <model-viewer
     src="https://raw.githubusercontent.com/Denexio/3d-model-viewer/main/3d-object.glb"
-    alt="3D model"
+      alt="3D model"
     camera-controls
     auto-rotate
-    style="width: 600px; height: 400px;">
+    shadow-intensity="1">
   </model-viewer>
 </body>
 </html>
